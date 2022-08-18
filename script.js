@@ -2,28 +2,34 @@
 var generateBtn = document.querySelector("#generate");
 const upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz"
-const specialCharcters = "!@#$%^&*()_+"
-const numbers = "1234567890"
+const specialCharactersCase = "!@#$%^&*()_<>=/,'"
+const numbersCase = "1234567890"
 var possibleCharacters = ""
 
 function generatePassword() {
   var passwordLength = prompt("Enter the length of the password");
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your password must be atleast 8 characters and no more than 128 characters");
+    return generatePassword();
+  } else {
+    alert("Your password will be" + passwordLength + "charcters long!")
+  }
   var upperCase = confirm("Do you want upper case letters?")
   var lowerCase = confirm("Do you want lower case letters?")
   var numbers = confirm("Do you want numbers?")
   var specialCharacters = confirm("Do you want special characters?")
   console.log(passwordLength, upperCase, lowerCase, numbers, specialCharacters);
-  if (upperCase) {
+  if (upperCase == true) {
     possibleCharacters = possibleCharacters + upperCaseCharacters;
   }
-  if (lowerCase) {
+  if (lowerCase == true) {
     possibleCharacters = possibleCharacters + lowerCaseCharacters;
   }
-  if (numbers) {
-    possibleCharacters = possibleCharacters + numbers;
+  if (numbers == true) {
+    possibleCharacters = possibleCharacters + numbersCase;
   }
-  if (specialCharacters) {
-    possibleCharacters = possibleCharacters + specialCharacters;
+  if (specialCharacters == true) {
+    possibleCharacters = possibleCharacters + specialCharactersCase;
   }
   var password = ""
   for (var i = 0; i < passwordLength; i++) {
