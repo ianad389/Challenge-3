@@ -18,5 +18,5 @@ Here is a link to my github: https://github.com/ianad389
 
 ## Screenshots
 Here is some screenshots of the code and project! 
-![App](/Screen%20Shot%202022-08-18%20at%203.58.26%20PM.png)
-![App](/Screen%20Shot%202022-08-18%20at%203.59.04%20PM.png)
+![App](Screen%20Shot%202022-08-18%20at%203.58.26%20PM.png)
+![App](Screen%20Shot%202022-08-18%20at%203.59.04%20PM.png)
